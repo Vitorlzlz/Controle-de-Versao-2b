@@ -5,29 +5,35 @@
         <ion-col size="9">
           <ion-item>
             <ion-input placeholder="Nome de um produto" [(ngModel)]="texto"></ion-input>
-            
-          </ion-item> 
+
+          </ion-item>
         </ion-col>
         <ion-col size="3">
-          <ion-button color="primary" size="small" (click)="adiciona()" >
+          <ion-button color="primary" size="small" (click)="adiciona()">
             <ion-icon name="save-outline"></ion-icon>
           </ion-button>
         </ion-col>
       </ion-row>
       <ion-row>
         <ion-col>
-          <ion-item *ngFor = "let item of variavel_lista" >
-            {{item}}
-            <ion-button color="danger" size="small" >
-              <ion-icon name="trash-outline"></ion-icon>
-            </ion-button>
+          <ion-item *ngFor = "let elemento_da_lista of variavel_lista; index as i">
+            <ion-grid>
+              <ion-row>
+                <ion-col size="9">
+                  {{elemento_da_lista[1]}}
+                </ion-col>
+                <ion-col size="3">
+                  <ion-button color="danger" size="small" (click)="remove(i)">
+                    <ion-icon name="trash-outline"></ion-icon>
+                  </ion-button>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+
           </ion-item>
-        </ion-col>
-        <ion-col size="3">
-         
         </ion-col>
       </ion-row>
     </ion-grid>
 
-  </div>  
+  </div>
 </ion-content>
