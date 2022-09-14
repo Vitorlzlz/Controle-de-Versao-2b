@@ -2,4 +2,27 @@
 #posicionamento {
   padding-top: 20%;
   padding-left: 10%;
+
 }
+ion-content{
+  --ion-background-color: rgb(42, 40, 43);
+}
+
+.Botao {
+  padding-left: 7px;
+}
+
+h1 {
+  text-align: center;
+  padding-right: 38px ;
+}
+
+ion-item{
+  --ion-background-color: rgb(132, 124, 129);
+}
+
+.row{
+  display: flex; 
+  padding-left: 200px
+}
+
